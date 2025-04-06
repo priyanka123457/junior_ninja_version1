@@ -1,0 +1,197 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* Makes rem calculations easier */
+  font-family: 'Urbanist', sans-serif;
+}
+
+/* Container Styling */
+.container {
+  width: 100%;
+  max-width: 120rem; /* Limit the max width for larger screens */
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Row Layout: Flexbox */
+.row {
+  display: flex;
+  align-items: center;  /* Vertically center content */
+  justify-content: space-between;  /* Space between the text and the image */
+  flex-wrap: wrap;  /* Make sure the content wraps on smaller screens */
+  margin-bottom: 3rem; /* Space between the two rows */
+}
+
+/* Left Text Styling */
+.text-container {
+  width: 50%;  /* Text section takes 50% of the row */
+  padding-right: 2rem;
+}
+
+.text-container h1 {
+  font-size: 3.5rem; /* Heading size */
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.text-container h2, .text-container h3 {
+  font-size: 2.5rem; /* Subheading size */
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.text-container p {
+  font-size: 1.8rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  max-width: 90%;
+}
+
+hr {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 2px solid #ddd;
+}
+
+/* Button Styling */
+.buttons-container {
+  margin-top: 2rem;
+}
+/* Button Styling */
+button {
+  padding: 1rem 2.5rem; /* Larger padding for a more prominent button */
+  font-size: 1.6rem; /* Set font size for readability */
+  font-weight: bold; /* Make the text bold */
+  border: none; /* Remove the default border */
+  cursor: pointer; /* Change cursor to pointer when hovering */
+  background-color: black; /* Set the background color */
+  color:white; /* White text for contrast */
+  border-radius: 50px; /* Rounded corners for a more modern look */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Soft shadow for depth */
+  margin-right: 1rem; /* Space between buttons */
+  margin-top: 1rem; /* Add some space from the top */
+}
+
+/* Button Hover Effects */
+button:hover {
+  background-color: #7a4d23; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Learn More Button Highlight */
+button.btn.learn-more {
+  background-color: #5500f2; /* Highlight color for "Learn More" button */
+  border-radius: 8px; /* More subtle rounded corners */
+}
+
+button.btn.learn-more:hover {
+  background-color: #000ce6; /* Darker yellow on hover */
+}
+
+/* Get Started Button Highlight */
+button.btn.get-started {
+  background-color: #007bff; /* Highlight color for "Get Started" button */
+  border-radius: 8px; /* More subtle rounded corners */
+}
+
+button.btn.get-started:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  button {
+    padding: 0.8rem 2rem; /* Adjust padding for smaller screens */
+    font-size: 1.4rem; /* Slightly smaller font size */
+  }
+}
+
+
+/* Image Section Styling */
+.image-container {
+  width: 45%;  /* Image container takes 45% of the row */
+  display: flex;
+  justify-content: flex-end; /* Align image to the right */
+}
+
+.image {
+  width: 100%;  /* Ensure image takes up 100% of the container width */
+  height: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Soft shadow around the image */
+}
+
+/* Responsive Design */
+
+/* For Tablets and Small Screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .row {
+    flex-direction: column;  /* Stack content vertically on smaller screens */
+    align-items: center;
+  }
+
+  .text-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .image-container {
+    width: 80%; /* Image takes up more width on smaller screens */
+    margin-top: 2rem;
+  }
+
+  .image {
+    max-width: 100%;
+  }
+}
+
+/* For Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .text-container h1 {
+    font-size: 2.8rem;  /* Adjust font size for smaller screens */
+  }
+
+  .text-container h2, .text-container h3 {
+    font-size: 2rem;
+  }
+
+  .text-container p {
+    font-size: 1.6rem;
+  }
+
+  .image-container {
+    width: 90%;
+  }
+}
+
+/* For Very Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .text-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .text-container p {
+    font-size: 1.4rem;
+  }
+
+  .buttons-container button {
+    padding: 0.7rem 1.5rem;
+    font-size: 1.4rem;
+  }
+}
