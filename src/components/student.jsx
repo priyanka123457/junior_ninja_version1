@@ -2,16 +2,16 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
-const Kids = ({ courses }) => {
-  console.log("Courses data:", courses); // Add this for debugging
+const Student = ({ courses1 }) => {
+  console.log("Courses data:", courses1); // Add this for debugging
 
   return (
     <div className="container mt-5" style={{ marginTop: "50px", position: "relative", zIndex: 10 }}>
       <h1 className="text-center mb-4" style={{ color: "orange", fontSize: "2.5rem", fontWeight: "bold" }}>
-        College Student Courses
+        Student Dashboard
       </h1>
       <div className="row">
-        {courses && courses.map((course) => (
+        {courses1 && courses1.map((course) => (
           <div key={course.id} className="col-md-4 mb-4">
             <div className="card h-100" style={{ 
               backgroundColor: "#1a1a1a", 
@@ -28,13 +28,21 @@ const Kids = ({ courses }) => {
               <div className="card-body">
                 <h5 className="card-title" style={{ color: "orange" }}>{course.courseName}</h5>
                 <p className="card-text">{course.description}</p>
-                <Link 
-                  to={`/course/${course.id}`} 
-                  className="btn btn-primary"
-                  style={{ backgroundColor: "orange", border: "none", color: "black" }}
-                >
-                  Learn More
-                </Link>
+                <div className="d-flex justify-content-between">
+                  <Link 
+                    to={`/course/${course.id}`} 
+                    className="btn btn-primary"
+                    style={{ backgroundColor: "orange", border: "none", color: "black" }}
+                  >
+                    View Details
+                  </Link>
+                  <button 
+                    className="btn btn-success"
+                    style={{ backgroundColor: "green", border: "none" }}
+                  >
+                    Enroll Now
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -44,4 +52,4 @@ const Kids = ({ courses }) => {
   );
 };
 
-export default Kids;
+export default Student;
