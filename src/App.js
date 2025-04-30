@@ -6,6 +6,7 @@ import CourseDetails from "./components/CourseDetails";
 import Student from "./components/student";
 import Contact from "./components/contact";
 import VideoComponent from "./components/vedio";
+import Bookclass from "./components/bookFreeclass";
 
 function App() {
   const courses = [
@@ -140,25 +141,36 @@ function App() {
       }}
     >
       <Navvar />
-      <Bodycontains />
+      
+      
+
+      
+
       <div style={{ padding: "50px 0", position: "relative", zIndex: 5 }}>
         <Routes>
         <Route path="/" element={
             <div>
-              <Kids courses={courses} />
-              <Student courses1={courses1} /> {/* Add Student here */}
+              <Bodycontains />
+              {/* <Kids courses={courses} /> */}
+              {/* <Student courses1={courses1} /> Add Student here */}
               < Contact />
-              < VideoComponent/> {/* Add Student here */}
-
+              < VideoComponent/> Add Student here
             </div>
           } />
+          
           <Route path="/course/:courseId" element={<CourseDetails courses={courses} />} />
-          <Route path="/student" element={<Student courses1={courses1} />} />
-          <Route path="/contact" element={<Contact/>}/>
+          <Route path="/student" element={<div><Student courses1={courses1} />
+          <Kids courses={courses} />
+           </div>}/>
 
+          <Route path="/contact" element={<Contact/>}/>
+          <Route path="/bookFreeclass" element={<Bookclass/>} />
 
         </Routes>
+        
+
       </div>
+    
     </div>
   );
 }

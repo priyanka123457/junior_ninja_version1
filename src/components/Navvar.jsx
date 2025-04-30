@@ -19,14 +19,17 @@ const Navvar = () => {
           <nav>
             <ul>
               <li><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Home</Link></li>
-              <li><Link to="/student" style={{ color: 'inherit', textDecoration: 'none' }}>Student</Link></li>
+              <li><Link to="/student" style={{ color: 'inherit', textDecoration: 'none' }}>Course</Link></li>
               <li><Link to="/contact" style={{ color: 'inherit', textDecoration: 'none' }}>Contact</Link></li>
               <li><Link to="/contact" style={{ color: 'inherit', textDecoration: 'none' }}>Career</Link></li>
             </ul>
           </nav>
+          <Link to="/bookFreeclass">
           <div className="button-container">
             <button className="navbar-button">Book your seat now</button>
           </div>
+
+          </Link>
         </div>
       </header>
     </>

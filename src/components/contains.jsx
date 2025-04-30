@@ -1,5 +1,7 @@
 import React from "react";
 import './css/container.css';  
+import  "./bookFreeclass";
+import { Link } from "react-router-dom";
 
 const Bodycontains = () => {
   return (
@@ -16,8 +18,14 @@ const Bodycontains = () => {
               Computer science helps children with communication, creativity, math, problem solving, and prepares them for skills needed in the world.
             </p>
             <div className="buttons-container" style={{marginBottom:'10px'}}>
-              <button style={{backgroundColor:'pink', padding: '10px 20px' ,borderRadius: '5px', marginRight: '10px'}} className="btn">Explore Courses</button>
-              <button style={{backgroundColor:'pink',padding:'10px 20px',borderRadius:'5px',}} className="btn">Book a Free Class</button>
+            <Link to = "/student">
+            <button style={{backgroundColor:'pink', padding: '10px 20px' ,borderRadius: '5px', marginRight: '10px'}} className="btn">Explore Courses</button>
+
+            </Link>
+              <Link to = "/bookFreeclass">
+              
+              <button style={{backgroundColor:'pink',padding:'10px 20px',borderRadius:'5px',}} className="btn">  Book a Free Class</button>
+              </Link>
             </div>
           </div>
 
